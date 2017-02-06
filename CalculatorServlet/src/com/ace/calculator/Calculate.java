@@ -108,6 +108,12 @@ public class Calculate extends HttpServlet {
 		req.getRequestDispatcher("/Calculator").forward(req, resp);
 	}
 
+	protected void clearScreen(){
+		for (int i = 0; i < 25; i++) {
+			System.out.println();
+		}
+	}
+	
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
